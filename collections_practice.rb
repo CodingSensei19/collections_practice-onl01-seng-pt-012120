@@ -1,6 +1,6 @@
 def swap_elements(array)
   array[1..2] = array[1..2].sort do |a,b|
-    if a==b || a<b || a>b 
+    if a==b || a<b || a>b
       1
     end
   end
@@ -49,7 +49,7 @@ end
 
 def sum_array(array)
   #Advanced: Try using the .inject method here.
-  #(5..10).inject {|sum, n| sum + n }    
+  #(5..10).inject {|sum, n| sum + n }
   sum = 0
   array. each do |number|
     if number.is_a? Integer
@@ -60,7 +60,7 @@ def sum_array(array)
 end
 
 def sum_array_inject(array)
-    array.inject do |sum,number| 
+    array.inject do |sum,number|
         sum + number
     end
 end
@@ -75,18 +75,18 @@ def add_s(array)
   #Build a method that adds an "s" to each word in the array except for the second element in the array ("feet" is already plural).
   return_array = []
       array.each_with_index do |word,index|
-        if index != 1 
+        if index != 1
           word = word + "s"
         end
-        return_array << word 
+        return_array << word
   end
-  
+
   return_array
 end
 
 def add_s_collect(array)
       array.each_with_index.collect do |word,index|
-        if index != 1 
+        if index != 1
           word = word + "s"
         else
           word = word
